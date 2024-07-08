@@ -48,9 +48,9 @@ const Hero = () => {
   }, [calc])
     
   return (
-    <div className="flex flex-col  relative h-[60vh] w-[30vw] border-4 border-zinc-300 rounded-3xl">
+    <div className="flex flex-col  relative sm:h-[60vh] sm:w-[25vw]  border-4 border-zinc-300 rounded-3xl">
       <Screen screen={num} />
-      <div className="h-[100%] w-[100%] grid grid-cols-4 grid-rows-5 place-items-center p-3 ">
+      <div className="h-[100%] w-[100%] grid grid-cols-4 grid-rows-5 place-items-center p-4 gap-2">
       <button className=" btn btn-circle  btn-active btn-outline btn-ghost text-2xl w-14 h-14 "  onClick={oprator}>%</button>
         <button className=" btn btn-circle  btn-active btn-outline btn-ghost text-2xl w-14 h-14 " onClick={oprator}>X</button>
         <button className=" btn btn-circle  btn-active btn-outline btn-ghost text-3xl w-14 h-14 pb-2 " onClick={oprator}>÷</button>
