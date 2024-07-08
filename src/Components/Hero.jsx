@@ -1,5 +1,7 @@
 import { useState , useEffect} from "react";
 import Screen from "./Screen";
+import back from './backspace.svg'
+
 
 
 const Hero = () => {
@@ -46,7 +48,8 @@ const Hero = () => {
     }
 
   }, [calc])
-    
+
+  
   return (
     <div className="flex flex-col  relative sm:h-[60vh] sm:w-[25vw]  border-4 border-zinc-300 rounded-3xl">
       <Screen screen={num} />
@@ -54,7 +57,7 @@ const Hero = () => {
       <button className=" btn btn-circle  btn-active btn-outline btn-ghost text-2xl w-14 h-14 "  onClick={oprator}>%</button>
         <button className=" btn btn-circle  btn-active btn-outline btn-ghost text-2xl w-14 h-14 " onClick={oprator}>X</button>
         <button className=" btn btn-circle  btn-active btn-outline btn-ghost text-3xl w-14 h-14 pb-2 " onClick={oprator}>÷</button>
-        <button className=" btn btn-circle  btn-active btn-outline btn-ghost text-2xl w-14 h-14 " onClick={removenum}>&#11164;</button>
+        <button className=" btn btn-circle  btn-active btn-outline btn-ghost text-2xl w-14 h-14 " onClick={removenum}><img src={back} alt="backspace" height={20} width={30} /></button>
         <button className="btn btn-circle btn-outline  w-14 h-14 text-2xl" onClick={addnum}>1</button>
         <button className="btn btn-circle btn-outline  w-14 h-14 text-2xl" onClick={addnum}>2</button>
         <button className="btn btn-circle btn-outline  w-14 h-14 text-2xl" onClick={addnum}>3</button>
