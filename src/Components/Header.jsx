@@ -9,7 +9,7 @@ export function Header() {
                   <div className="absolute inset-0 w-full h-full bg-black z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
           {/* <Boxes /> */}
-      <h1 className="md:text-5xl text-2xl mt-10 lg:text-7xl font-bold text-center text-white relative z-20">
+      <h1 className="md:text-5xl text-5xl mt-10 lg:text-7xl font-bold text-center text-white relative z-20">
         Calculator
       </h1>
       <div className="w-[40rem] h-40 relative">
