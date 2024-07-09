@@ -5,7 +5,7 @@ import { Boxes } from "./Background";
 
 export function Header() {
   return (
-      <div className="h-[30vh]  relative w-full overflow-hidden bg-black flex flex-col items-center justify-center rounded-lg">
+      <div className="h-[20vh]  relative w-full overflow-hidden bg-black flex flex-col items-center justify-center rounded-lg">
                   <div className="absolute inset-0 w-full h-full bg-black z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
           {/* <Boxes /> */}

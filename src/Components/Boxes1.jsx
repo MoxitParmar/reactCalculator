@@ -11,8 +11,8 @@ const Boxes1 = () => {
     <div>
       
       <Header />
-      <div className="h-[70vh] relative w-full overflow-hidden bg-black flex flex-col items-center justify-start rounded-lg">
-        <div className="absolute inset-0 w-full h-full bg-black z-20 [mask-image:radial-gradient(transparent,transparent)] pointer-events-none" />
+      <div className="h-[80vh] relative w-full pt-5 overflow-hidden bg-black flex flex-col items-center justify-start rounded-lg">
+        <div className="absolute inset-0 w-full  h-full bg-black z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
         
         <Boxes />
         <Hero />
