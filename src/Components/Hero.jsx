@@ -1,4 +1,4 @@
-import { useState , useEffect} from "react";
+import { useState , useEffect, useCallback} from "react";
 import Screen from "./Screen";
 import back from './backspace.svg'
 
@@ -27,9 +27,8 @@ const Hero = () => {
     setCalc((prev) => !prev);
   }
 
-  
+  let result = useCallback(() => { 
 
-  useEffect(() => {
     if (operator === '+') {
       setNum((parseFloat(num2) + parseFloat(num)).toFixed(3));
       setNum2('');
@@ -46,12 +45,18 @@ const Hero = () => {
       setNum((parseFloat(num2) / parseFloat(num)).toFixed(3));
       setNum2('');
     }
+  }, [ calc]);
 
-  }, [calc])
+  
+
+  useEffect(() => {
+    
+    result()
+    }, [calc])
 
   
   return (
-    <div className="flex flex-col  relative sm:h-[60vh] sm:w-[25vw]  border-4 border-zinc-300 rounded-3xl">
+    <div className="flex flex-col  relative sm:h-[60vh] sm:w-[25vw]  border-4 border-slate-300 rounded-3xl">
       <Screen screen={num} />
       <div className="h-[100%] w-[100%] grid grid-cols-4 grid-rows-5 place-items-center p-4 gap-2">
       <button className=" btn btn-circle  btn-active btn-outline btn-ghost text-2xl w-14 h-14 "  onClick={oprator}>%</button>
